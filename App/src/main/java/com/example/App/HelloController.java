@@ -9,4 +9,11 @@ public class HelloController {
         return "Hello From BridgeLabz";
     }
 
+
+    @GetMapping("/UC2")
+    public String sayHelloWithName(@RequestParam String name) {
+        return "Hello " + name + " from BridgeLabz";
+    }
+
+
 }
