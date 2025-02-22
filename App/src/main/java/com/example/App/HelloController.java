@@ -1,7 +1,6 @@
 package com.example.App;
 
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 public class HelloController {
     @RequestMapping("/UC1")
@@ -17,6 +16,10 @@ public class HelloController {
     @GetMapping("/UC3/{name}")
     public String sayHelloWithPath(@PathVariable String name) {
         return  "Hello " + name + " from BridgeLabz";
+    }
+    @PostMapping("/UC4")
+    public  String showHelloNameWithPost(@RequestBody UserDTO user){
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
     }
 
 
